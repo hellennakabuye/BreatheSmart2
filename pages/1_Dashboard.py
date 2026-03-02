@@ -35,7 +35,7 @@ with col2:
     st.metric("High Risk Cases", df[df["Risk"] >= 11].shape[0])
 
 with col3:
-    st.metric("Moderate Risk", df[df["Risk"] >= 6].shape[0])
+    st.metric("Moderate Risk", df[(df["Risk"] >= 6) & (df["Risk"] < 11)].shape[0])
 
 with col4:
     st.metric("Divisions Covered", df["Division"].nunique())
